@@ -1,4 +1,4 @@
-package com.emerzonic.datamodel;
+package src.datamodel;
 
 import java.time.LocalDate;
 
@@ -7,6 +7,12 @@ public class TodoItem {
     private String shortDescription;
     private String details;
     private LocalDate deadline;
+
+    public TodoItem(String shortDescription, String details, LocalDate deadline) {
+        this.shortDescription = shortDescription;
+        this.details = details;
+        this.deadline = deadline;
+    }
 
     public String getShortDescription() {
         return shortDescription;
@@ -32,11 +38,6 @@ public class TodoItem {
         this.deadline = deadline;
     }
 
-    public TodoItem(String shortDescription, String details, LocalDate deadline) {
-        this.shortDescription = shortDescription;
-        this.details = details;
-        this.deadline = deadline;
-    }
 
     @Override
     public String toString() {
